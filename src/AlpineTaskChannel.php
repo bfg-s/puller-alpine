@@ -2,7 +2,7 @@
 
 namespace Bfg\PullerAlpine;
 
-interface PullAlpineInterface
+interface AlpineTaskChannel
 {
     const CHANNEL = "alpine";
 }

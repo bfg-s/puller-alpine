@@ -23,7 +23,7 @@ class PullerAlpineServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        \Puller::registerChannelInterface(PullAlpineInterface::class);
+        \Puller::registerChannelInterface(AlpineTaskChannel::class);
 
         \Blade::directive('alpineStore', [BladeDirectiveAlpineStore::class, 'directive']);
 
