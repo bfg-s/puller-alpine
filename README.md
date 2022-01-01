@@ -17,6 +17,7 @@ php artisan vendor:publish --tag=puller-alpine-assets
 ```
 Connect the script in your document after Alpine initialization:
 ```html
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <script src="{{ asset('vendor/puller-alpine/puller-alpine.js') }}"></script>
 ```
 
