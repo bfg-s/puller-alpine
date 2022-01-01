@@ -1,0 +1,41 @@
+{
+    "name": "bfg/puller-alpine",
+    "description": "A description for puller-alpine.",
+    "type": "package",
+    "license": "MIT",
+    "keywords": [
+        "laravel"
+    ],
+    "authors": [
+        {
+            "name": "Xsaven",
+            "email": "xsaven@gmail.com"
+        }
+    ],
+    "require": {
+        "bfg/puller": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bfg\\PullerAlpine\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bfg\\PullerAlpine\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bfg\\PullerAlpine\\PullerAlpineServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0"
+    }
+}
