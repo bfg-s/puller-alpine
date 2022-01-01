@@ -10,7 +10,16 @@ Alpine.magic('now', () => {
 
 window.Puller.channel('alpine', ({name, detail}) => {
     let alpine = /^([^.]+)\.?([^.]+)?$/.exec(name);
-    let store = alpine ? Alpine.store(alpine[1]) : null;
+    let storeName = alpine ? alpine[1] : null;
+    let store = Alpine.store(storeName);
+    if (!store && !alpine[2]) {
+        store = Alpine.store(storeName, {});
+        store = Alpine.store(storeName);
+    }
+    else if (!store && alpine[2]) {
+        Alpine.store(storeName, {[alpine[2]]: null});
+        store = Alpine.store(storeName);
+    }
     if (alpine && alpine[2] && store) {
         if (typeof store[alpine[2]] === "function") {
             store[alpine[2]](detail);
