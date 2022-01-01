@@ -4,8 +4,8 @@ if (!window.Puller) {
     throw "This extension must be initialized after Alpine.";
 }
 
-Alpine.magic('now', () => {
-    return (new Date).toLocaleTimeString()
+Alpine.magic('message', () => (...attrs) => {
+    return window.Puller.message(...attrs);
 })
 
 window.Puller.channel('alpine', ({name, detail}) => {
