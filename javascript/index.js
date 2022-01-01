@@ -4,9 +4,18 @@ if (!window.Puller) {
     throw "This extension must be initialized after Alpine.";
 }
 
-Alpine.magic('message', () => (...attrs) => {
+window.Alpine.magic('pm', () => (...attrs) => {
     return window.Puller.message(...attrs);
-})
+});
+
+window.Alpine.store('errors', {});
+window.Alpine.store('status', 0);
+
+window.Puller.onError(({detail}) => {
+    window.Alpine.store('errors', detail.errors);
+    window.Alpine.store('status', detail.status);
+    window.Alpine.store('message', detail.message);
+});
 
 window.Puller.channel('alpine', ({name, detail}) => {
     let alpine = /^([^.]+)\.?([^.]+)?$/.exec(name);
