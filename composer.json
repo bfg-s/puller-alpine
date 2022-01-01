@@ -25,17 +25,11 @@
             "Bfg\\PullerAlpine\\Tests\\": "tests"
         }
     },
-    "scripts": {
-        "test": "vendor/bin/phpunit"
-    },
     "extra": {
         "laravel": {
             "providers": [
                 "Bfg\\PullerAlpine\\PullerAlpineServiceProvider"
             ]
         }
-    },
-    "require-dev": {
-        "orchestra/testbench": "^6.0"
     }
 }
