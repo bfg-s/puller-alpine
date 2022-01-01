@@ -3,12 +3,6 @@ if (!window.Puller) {
 } else if (!window.Alpine) {
     throw "This extension must be initialized after Alpine.";
 }
-document.addEventListener('alpine:init', () => {
-    window.Alpine.magic('message', () => (...attrs) => {
-        return window.Puller.message(...attrs);
-    });
-});
-
 window.Alpine.store('errors', {});
 window.Alpine.store('status', 0);
 window.Alpine.store('error_message', '');
@@ -17,6 +11,10 @@ window.Puller.onError(({detail}) => {
     window.Alpine.store('errors', detail.errors);
     window.Alpine.store('status', detail.status);
     window.Alpine.store('error_message', detail.message);
+});
+
+window.Alpine.magic('message', () => (...attrs) => {
+    return window.Puller.message(...attrs);
 });
 
 window.Puller.channel('alpine', ({name, detail}) => {
