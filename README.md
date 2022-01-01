@@ -8,14 +8,14 @@
 `composer require bfg/puller-alpine`
 
 ## Usage
-1. Make sure that in your `public/vendor` folder published `puller-alpine/puller-alpine.js`.
-   He had to appear immediately after installing the package,
-   as it broads publications in the `laravel-assets` group.
-   If this did not happen and you did not appear there, publish it manually:
+Make sure that in your `public/vendor` folder published `puller-alpine/puller-alpine.js`.
+He had to appear immediately after installing the package,
+as it broads publications in the `laravel-assets` group.
+If this did not happen and you did not appear there, publish it manually:
 ```bash
 php artisan vendor:publish --tag=puller-alpine-assets
 ```
-2. Connect the script in your document after Alpine initialization:
+Connect the script in your document after Alpine initialization:
 ```html
 <script src="{{ asset('vendor/puller-alpine/puller-alpine.js') }}"></script>
 ```
