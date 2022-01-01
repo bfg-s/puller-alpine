@@ -20,11 +20,6 @@
             "Bfg\\PullerAlpine\\": "./src"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Bfg\\PullerAlpine\\Tests\\": "tests"
-        }
-    },
     "extra": {
         "laravel": {
             "providers": [
