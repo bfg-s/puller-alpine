@@ -6,6 +6,9 @@
 ## Install
 `composer require bfg/puller-alpine`
 
+Navigate the [link](https://github.com/bfg-s/puller) to read the documentation
+in the [https://github.com/bfg-s/puller](https://github.com/bfg-s/puller).
+
 ## Usage
 Make sure that in your `public/vendor` folder published `puller-alpine/puller-alpine.js`.
 He had to appear immediately after installing the package,
