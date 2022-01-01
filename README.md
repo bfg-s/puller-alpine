@@ -59,6 +59,15 @@ Generated:
 <script type='text/javascript'>document.addEventListener('alpine:init', function () {Alpine.store("chat", {"list":[]});Alpine.store("online", {"count":0});})</script>
 ```
 
+## Built-in stores
+
+#### $errors
+Store with last error list
+#### $error_message
+Store with last error message
+#### $status
+Store with last puller status code ( 0 - is normal)
+
 ## Changelog
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
