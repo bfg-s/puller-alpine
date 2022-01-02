@@ -59,6 +59,12 @@ Generated:
 <script type='text/javascript'>document.addEventListener('alpine:init', function () {Alpine.store("chat", {"list":[]});Alpine.store("online", {"count":0});})</script>
 ```
 
+## Built-in magic
+For send Messages
+```html
+$message('event-name', {my: 'data'})
+```
+
 ## Built-in stores
 
 #### $errors
